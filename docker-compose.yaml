@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  dagu:
+    image: yohamta/dagu:latest
+    restart: always
+    volumes:
+      - $HOME/.dagu/dags:/home/dagu/.dagu/dags
+      - $HOME/.dagu/data:/home/dagu/.dagu/data
+      - $HOME/.dagu/logs:/home/dagu/.dagu/logs
+    ports:
+      - "8083:8080"
